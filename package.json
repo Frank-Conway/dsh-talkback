@@ -1,0 +1,72 @@
+{
+  "name": "dsh-talkback",
+  "version": "0.3.0",
+  "type": "module",
+  "description": "本地语音对话：说话→本机 ASR 识别→作为消息发出→助手回复由本机 TTS 朗读，可随时插话打断。音频只在内存里流转，浏览器采集与播放。",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "docs",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.5"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.9.0",
+    "dsh": ">=0.2.1-0 <0.3.0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "voice",
+    "speech",
+    "asr",
+    "tts",
+    "speech-to-text",
+    "text-to-speech",
+    "voice-cloning",
+    "barge-in",
+    "local",
+    "privacy"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "kim"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frank-Conway/dsh-talkback.git"
+  },
+  "homepage": "https://github.com/Frank-Conway/dsh-talkback#readme",
+  "bugs": {
+    "url": "https://github.com/Frank-Conway/dsh-talkback/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "test": "node test/run.mjs",
+    "mock": "node test/mock-services.mjs",
+    "prepublishOnly": "node test/run.mjs"
+  }
+}

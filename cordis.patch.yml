@@ -1,0 +1,5 @@
+# dsh-talkback 往 profile 里插一行插件：宿主半边负责 ASR/TTS 与注入，
+# 客户端半边（lib/client.js）由 dsh-client-modules 自动作为浏览器模块加载。
+- insert:
+    - id: voice
+      name: dsh-talkback

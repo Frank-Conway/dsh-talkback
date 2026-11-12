@@ -1,0 +1,17 @@
+# 依赖：node_modules/@deepseek-ai/schemastery 是指向 DSH 安装目录的联接，
+# 由每台机器自己建，不进仓库
+node_modules/
+
+# 日志与临时产物
+*.log
+*.tmp
+*.tgz
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# 本机 npm 配置（可能含 token）
+.npmrc
